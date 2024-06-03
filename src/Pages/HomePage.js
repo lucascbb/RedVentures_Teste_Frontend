@@ -87,14 +87,19 @@ const HomePage = async () => {
     mainProteins.appendChild(cardProduct);
   });
 
+
   const handleCardClick = (card, cards, type) => {
-    const cardBrothDataSelected = broths.find(broth => broth.id === card.id);
-    broth = cardBrothDataSelected
+    let arrayProduct;
 
-    const cardProteinDataSelected = proteins.find(protein => protein.id === card.id);
-    protein = cardProteinDataSelected
+    if (type === "broth") {
+      arrayProduct = broths.find(broth => broth.id === card.id);
+      broth = arrayProduct;
+    } else {
+      arrayProduct = proteins.find(protein => protein.id === card.id);
+      protein = arrayProduct;
+    }
 
-    const imageProduct = card.querySelector('img')
+    const imageProduct = card.querySelector('img');
     const nameProduct = card.children[1].classList;
     const descriptionProduct = card.children[2].classList;
     const priceProduct = card.children[3].classList;
@@ -104,14 +109,15 @@ const HomePage = async () => {
         element.classList.remove('cardProduct_selected');
         element.classList.add('cardProduct');
 
-        element.children[1].classList.remove('nameProduct_selected');
-        element.children[1].classList.add('nameProduct');
+        const child = element.children;
 
-        element.children[2].classList.remove('descriptionProduct_selected');
-        element.children[2].classList.add('descriptionProduct');
+        child[1].classList.remove('nameProduct_selected');
+        child[1].classList.add('nameProduct');
+        child[2].classList.remove('descriptionProduct_selected');
+        child[2].classList.add('descriptionProduct');
+        child[3].classList.remove('priceProduct_selected');
+        child[3].classList.add('priceProduct');
 
-        element.children[3].classList.remove('priceProduct_selected');
-        element.children[3].classList.add('priceProduct');
 
         if (type === "broth") {
           const brothImages = broths.find(broth => broth.id === element.id);
@@ -121,12 +127,8 @@ const HomePage = async () => {
           element.querySelector('img').src = proteinImages.imageInactive
         }
       });
-      
-      if (type === "broth") {
-        imageProduct.src = cardBrothDataSelected.imageActive
-      } else if (type === "protein") {
-        imageProduct.src = cardProteinDataSelected.imageActive
-      }
+
+      imageProduct.src = arrayProduct.imageActive
 
       card.classList.remove('cardProduct');
       card.classList.add('cardProduct_selected');
@@ -139,12 +141,9 @@ const HomePage = async () => {
 
       priceProduct.remove('priceProduct');
       priceProduct.add('priceProduct_selected');
+      
     } else if (card.className === "cardProduct_selected") {
-      if (type === "broth") {
-        imageProduct.src = cardBrothDataSelected.imageInactive
-      } else {
-        imageProduct.src = cardProteinDataSelected.imageInactive
-      }
+      imageProduct.src = arrayProduct.imageInactive
 
       card.classList.remove('cardProduct_selected');
       card.classList.add('cardProduct');
