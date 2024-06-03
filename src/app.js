@@ -1,5 +1,5 @@
 import router from './router.js';
-import '../src/styles/cardProduct.css';
+import '../src/Styles/cardProduct.css';
 
 const App = () => {
   router();

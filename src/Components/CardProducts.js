@@ -1,16 +1,14 @@
 const CardProduct = (props) => {
-    const { name, description, imageActive, imageInactive, price } = props;
+    const { name, description, imageInactive, price } = props;
 
     const card = document.createElement('div');
-    card.classList.add('card');
+    card.classList.add('cardProduct');
 
     card.innerHTML = `
-        <div id="cardProduct">
-            <img id="imageProduct" src="${imageInactive}" alt="${name}">
-            <h2 id="nameProduct" >${name}</h2>
-            <p id="descriptionProduct">${description}</p>
-            <p id="priceProduct">US$ ${price}</p>
-        </div>
+        <img id="imageProduct" src="${imageInactive}" alt="${name}">
+        <h2 class="nameProduct" >${name}</h2>
+        <p class="descriptionProduct">${description}</p>
+        <p class="priceProduct">US$ ${price}</p>
     `;
 
     return card;

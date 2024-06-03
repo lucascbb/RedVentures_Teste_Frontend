@@ -61,20 +61,104 @@ const HomePage = async () => {
     </div>
   `;
 
+  const cardsBroths = [];
+  let broth;
+
+  const cardsProteins = [];
+  let protein;
+
   const broths = await getBroths();
   const mainBroths = page.querySelector('#mainBroths');
-  broths.map(product => {
+  broths?.map(product => {
     const cardProduct = CardProduct(product);
+    cardProduct.addEventListener('click', () => handleCardClick(cardProduct, cardsBroths, 'broth'));
+    cardProduct.id = product.id;
+    cardsBroths.push(cardProduct);
     mainBroths.appendChild(cardProduct);
   });
 
-
   const proteins = await getProteins();
   const mainProteins = page.querySelector('#mainProteins');
-  proteins.map(product => {
+  proteins?.map(product => {
     const cardProduct = CardProduct(product);
+    cardProduct.addEventListener('click', () => handleCardClick(cardProduct, cardsProteins, 'protein'));
+    cardProduct.id = product.id;
+    cardsProteins.push(cardProduct);
     mainProteins.appendChild(cardProduct);
   });
+
+  const handleCardClick = (card, cards, type) => {
+    const cardBrothDataSelected = broths.find(broth => broth.id === card.id);
+    broth = cardBrothDataSelected
+
+    const cardProteinDataSelected = proteins.find(protein => protein.id === card.id);
+    protein = cardProteinDataSelected
+
+    const imageProduct = card.querySelector('img')
+    const nameProduct = card.children[1].classList;
+    const descriptionProduct = card.children[2].classList;
+    const priceProduct = card.children[3].classList;
+
+    if (card.className === "cardProduct") {
+      cards.forEach(element => {
+        element.classList.remove('cardProduct_selected');
+        element.classList.add('cardProduct');
+
+        element.children[1].classList.remove('nameProduct_selected');
+        element.children[1].classList.add('nameProduct');
+
+        element.children[2].classList.remove('descriptionProduct_selected');
+        element.children[2].classList.add('descriptionProduct');
+
+        element.children[3].classList.remove('priceProduct_selected');
+        element.children[3].classList.add('priceProduct');
+
+        if (type === "broth") {
+          const brothImages = broths.find(broth => broth.id === element.id);
+          element.querySelector('img').src = brothImages.imageInactive
+        } else if (type === "protein") {
+          const proteinImages = proteins.find(protein => protein.id === element.id);
+          element.querySelector('img').src = proteinImages.imageInactive
+        }
+      });
+      
+      if (type === "broth") {
+        imageProduct.src = cardBrothDataSelected.imageActive
+      } else if (type === "protein") {
+        imageProduct.src = cardProteinDataSelected.imageActive
+      }
+
+      card.classList.remove('cardProduct');
+      card.classList.add('cardProduct_selected');
+
+      nameProduct.remove('nameProduct');
+      nameProduct.add('nameProduct_selected');
+
+      descriptionProduct.remove('descriptionProduct');
+      descriptionProduct.add('descriptionProduct_selected');
+
+      priceProduct.remove('priceProduct');
+      priceProduct.add('priceProduct_selected');
+    } else if (card.className === "cardProduct_selected") {
+      if (type === "broth") {
+        imageProduct.src = cardBrothDataSelected.imageInactive
+      } else {
+        imageProduct.src = cardProteinDataSelected.imageInactive
+      }
+
+      card.classList.remove('cardProduct_selected');
+      card.classList.add('cardProduct');
+
+      nameProduct.remove('nameProduct_selected');
+      nameProduct.add('nameProduct');
+
+      descriptionProduct.remove('descriptionProduct_selected');
+      descriptionProduct.add('descriptionProduct');
+
+      priceProduct.remove('priceProduct_selected');
+      priceProduct.add('priceProduct');
+    }
+  };
 
   return page;
 };

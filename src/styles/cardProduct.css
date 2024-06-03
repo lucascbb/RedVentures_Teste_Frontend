@@ -6,8 +6,21 @@
     gap: 70px;
 }
 
-#cardProduct {
+.cardProduct {
     background-color: #FAFAED;
+    width: 320px;
+    height: 316px;
+    border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 34px;
+}
+
+.cardProduct_selected {
+    background-color: #1820EF;
     width: 320px;
     height: 316px;
     border-radius: 20px;
@@ -25,7 +38,7 @@
     margin-bottom: 10px;
 }
 
-#nameProduct {
+.nameProduct {
     font-family: MPLUSRounded1c900;
     font-size: 20px;
     font-weight: 900;
@@ -35,21 +48,52 @@
     margin-bottom: 10px;
 }
 
-#descriptionProduct {
+.nameProduct_selected {
+    font-family: MPLUSRounded1c900;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.descriptionProduct {
     font-family: MPLUSRounded1c400;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     height: 40px;
     text-align: center;
+    color: #000;
     margin-bottom: 15px;
 }
 
-#priceProduct {
+.descriptionProduct_selected {
+    font-family: MPLUSRounded1c400;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.priceProduct {
     font-family: MPLUSRounded1c900;
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
     text-align: center;
     color: #FF4E42;
+}
+
+.priceProduct_selected {
+    font-family: MPLUSRounded1c900;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    color: #FFC024;
 }
