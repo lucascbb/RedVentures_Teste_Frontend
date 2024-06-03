@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAFAED;
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c900';
+    src: url('../Assets/Fonts/MPLUSRounded1c-Black.ttf');
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c400';
+    src: url('../Assets/Fonts/MPLUSRounded1c-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c800';
+    src: url('../Assets/Fonts/MPLUSRounded1c-Medium.ttf');
+}
