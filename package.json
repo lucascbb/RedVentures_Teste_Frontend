@@ -10,10 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-replace": "^5.0.5",
     "vite": "^5.2.12"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5"
   }
 }
