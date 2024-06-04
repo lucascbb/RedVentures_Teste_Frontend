@@ -1,7 +1,9 @@
 import HomePage from './Pages/HomePage';
+import CheckoutPage from './Pages/CheckoutPage';
 
 const routes = {
   '/': HomePage,
+  '/checkout': CheckoutPage,
 };
 
 const router = async () => {
