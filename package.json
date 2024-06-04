@@ -1,7 +1,7 @@
 {
   "name": "teste-tecnico-red-ventures",
   "version": "1.0.0",
-  "description": "",
+  "description": "Teste técnico da Red Ventures paga vaga de Desenvolvedor Frontend. Projeto RamenGO",
   "main": "scripts.js",
   "scripts": {
     "dev": "vite --open"
