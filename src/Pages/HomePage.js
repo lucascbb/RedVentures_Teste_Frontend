@@ -57,9 +57,7 @@ const HomePage = async () => {
 
       <div id="radios1">
         <input type="radio" id="broth1" checked=true class="radio_broth" name="broth">
-
         <input type="radio" id="broth2" class="radio_broth" name="broth">
-
         <input type="radio" id="broth3" class="radio_broth" name="broth">
       </div>
 

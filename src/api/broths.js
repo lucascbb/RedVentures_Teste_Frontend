@@ -9,7 +9,7 @@ const getBroths = async () => {
         });
 
         if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
+            throw new Error('API response was not ok');
         }
 
         const data = await response.json();
