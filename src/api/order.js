@@ -4,7 +4,7 @@ const postOrder = async (orderData) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': 'ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf'
+                'x-api-key': import.meta.env.VITE_APIKEY
             },
             body: JSON.stringify(orderData)
         });
