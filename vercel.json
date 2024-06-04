@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/checkout" },
+      { "source": "/checkout", "destination": "/" }
+    ]
+  }
+  
