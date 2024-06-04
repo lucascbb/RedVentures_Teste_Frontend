@@ -1,0 +1,221 @@
+@media only screen and (min-width: 1024px) {
+
+    #mainBroths,
+    #mainProteins {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        gap: 70px;
+    }
+
+    .cardProduct {
+        background-color: var(--offWhite);
+        width: 320px;
+        height: 316px;
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 34px;
+        cursor: pointer;
+    }
+
+    .cardProduct:hover {
+        scale: 1.02;
+    }
+
+    .cardProduct_selected {
+        background-color: var(--blue);
+        width: 320px;
+        height: 316px;
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 34px;
+        cursor: pointer;
+    }
+
+    #imageProduct {
+        width: 104px;
+        height: 104px;
+        margin-bottom: 10px;
+    }
+
+    .nameProduct {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: var(--blue);
+        margin-bottom: 10px;
+    }
+
+    .nameProduct_selected {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .descriptionProduct {
+        font-family: MPLUSRounded1cMedium;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        height: 40px;
+        text-align: center;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+    .descriptionProduct_selected {
+        font-family: MPLUSRounded1cMedium;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        height: 40px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .priceProduct {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: var(--red);
+    }
+
+    .priceProduct_selected {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: var(--yellow);
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+    #mainBroths,
+    #mainProteins {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 30px;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        overflow-x: auto;
+        box-sizing: border-box;
+    }
+
+    #mainBroths::-webkit-scrollbar,
+    #mainProteins::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cardProduct {
+        background-color: var(--offWhite);
+        width: 288px;
+        height: 316px;
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 34px;
+        cursor: pointer;
+        flex: none;
+    }
+
+    .cardProduct_selected {
+        background-color: var(--blue);
+        width: 288px;
+        height: 316px;
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 34px;
+        cursor: pointer;
+        flex: none;
+    }
+
+    #imageProduct {
+        width: 104px;
+        height: 104px;
+        margin-bottom: 10px;
+    }
+
+    .nameProduct {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: var(--blue);
+        margin-bottom: 10px;
+    }
+
+    .nameProduct_selected {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .descriptionProduct {
+        font-family: MPLUSRounded1cMedium;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: center;
+        color: #000;
+    }
+
+    .descriptionProduct_selected {
+        font-family: MPLUSRounded1cMedium;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .priceProduct {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: var(--red);
+    }
+
+    .priceProduct_selected {
+        font-family: MPLUSRounded1cBlack;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: var(--yellow);
+    }
+}

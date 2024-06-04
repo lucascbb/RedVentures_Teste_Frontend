@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #FF4E42;
+    --offWhite: #FAFAED;
+    --blue: #1820EF;
+    --yellow: #FFC024;
+}
+
+body {
+    background-color: var(--offWhite);
+}
+
+
+@font-face {
+    font-family: 'MPLUSRounded1cBlack';
+    src: url('../Assets/Fonts/MPLUSRounded1c-Black.ttf');
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1cExtraBold1';
+    src: url('../Assets/Fonts/MPLUSRounded1c-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1cMedium';
+    src: url('../Assets/Fonts/MPLUSRounded1c-Medium.ttf');
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    scale: 1.03;
+}
